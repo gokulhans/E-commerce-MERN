@@ -20,7 +20,6 @@ app.post("/post", (req, res) => {
 });
 
 var indexRouter = require('./routes/index');
-
 app.use('/index',indexRouter);
 
 
