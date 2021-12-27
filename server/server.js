@@ -5,7 +5,7 @@ const cors = require('cors');
 
 // git controller and tester....
 /*
-merging
+merging by kannappan
 */
 // ends 
 app.use(cors());
