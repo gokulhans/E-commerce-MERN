@@ -7,7 +7,7 @@ const Data = [
     {
         id: "2",
         name: "govind",
-        class: "bsc"
+        class: "bsc" 
     }
 ]
 
