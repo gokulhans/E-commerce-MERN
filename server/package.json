@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "matrixa",
   "version": "0.0.0",
   "private": true,
@@ -21,5 +22,22 @@
   },
   "devDependencies": {
     "dotenv": "^10.0.0"
+=======
+  
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongodb": "^4.2.2"
+>>>>>>> dc3fb1c728bb03de990171f4050a215adc4ae411
   }
 }
