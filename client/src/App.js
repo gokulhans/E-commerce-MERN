@@ -24,7 +24,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
 
-        <img style={{ objectFit: "cover", width: 500, height: 500,margin:10,borderRadius:10 }} src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?cs=srgb&dl=pexels-photomix-company-230544.jpg&fm=jpg" alt="e-commerce"/>
+        <img style={{ objectFit: "cover", width: 500, height: 400,margin:10,borderRadius:10 }} src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?cs=srgb&dl=pexels-photomix-company-230544.jpg&fm=jpg" alt="e-commerce"/>
 
         <Footer />
       </div>
