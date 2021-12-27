@@ -3,10 +3,15 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+// git controller and tester....
+/*
+merging
+*/
+// ends 
 app.use(cors());
 
 app.get('/',(req,res)=>{
-    res.send('Welcome to Backend! Bitch')
+    res.send('Welcome to Backend! Bitch ')
 })
 
 app.post("/post", (req, res) => {
