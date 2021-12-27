@@ -14,6 +14,7 @@ var db = require('./connection');
 
   
 // middlewares 
+app.use(express.json())
 app.use(cors());
 
 
