@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Profile = () => {
-    return (
-        <div>
-            This is Profile Page
-        </div>
+  return (
+    <div>
+
+    <h3> This is Profile Page</h3>
+        </div >
     )
 }
 

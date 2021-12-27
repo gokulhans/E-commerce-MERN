@@ -1,22 +1,27 @@
 import React from "react";
-// import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import { Route, Routes } from "react-router-dom";
+import Register from "./pages/Register";
+import Product from "./pages/Product";
+import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
       <div>
-      <form action="../../post" method="post" 
-              className="form">
-          <button type="submit">Connected?</button>
-        </form>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
 
-        {/* <Routes>
-          <Route path="/" element={<TodoList />} />
-          <Route path="/edit/:id" element={<EditTodo />} />
-          <Route path="/create" element={<CreateTodo />} />
-        </Routes> */}
-        
       </div>
     </>
   );
