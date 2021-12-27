@@ -10,6 +10,11 @@ function App() {
     <>
       <Navbar />
       <div>
+      <form action="../../post" method="post" 
+              className="form">
+          <button type="submit">Connected?</button>
+        </form>
+        
         <Routes>
           <Route path="/" element={<TodoList />} />
           <Route path="/edit/:id" element={<EditTodo />} />

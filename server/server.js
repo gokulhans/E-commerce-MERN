@@ -9,9 +9,14 @@ app.get('/',(req,res)=>{
     res.send('Welcome to Backend! Bitch')
 })
 
+app.post("/post", (req, res) => {
+  console.log("Connected to React");
+  res.redirect("/");
+});
+
 var indexRouter = require('./routes/index');
 
-app.use('index',indexRouter);
+app.use('/index',indexRouter);
 
 
 app.listen(PORT,()=>{
