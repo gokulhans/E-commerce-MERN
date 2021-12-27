@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Admin = () => {
+const Login = () => {
     return (
         <div>
             This is Login Page
@@ -8,4 +8,4 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default Login
