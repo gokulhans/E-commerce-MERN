@@ -54,11 +54,11 @@ router.get('/signup', (req, res) => {
         req.session.user = String(response.user._id)
         req.session.loggedfalse = false
         req.session.loggedIN = true
-        res.redirect('/users/')
+        res.status(200).json(response)
       } else {
         req.session.loggedfalse = true
   
-        res.redirect('/login');
+        res.status(200).json(response);
       }
     })
   })

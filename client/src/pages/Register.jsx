@@ -36,6 +36,10 @@ const Register = () => {
             <input type="submit" value="Sign UP" onClick={()=>PostData()} />
         </div>
     )
+    
 }
+
+
+
 
 export default Register

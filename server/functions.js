@@ -6,7 +6,7 @@ module.exports={
     doSignup:(userdata)=>{
 
         return new Promise(async(resolve,reject)=>{
-            let user= await db.get().collection('users').findOne({gmail:userdata.email})
+            let user= await db.get().collection('users').findOne({email:userdata.email})
             if (user) {
                 let response = {}
                 response.signupstatus = false
@@ -22,14 +22,14 @@ module.exports={
     }, 
     doLogin:(userdata)=>{
         return new Promise(async(resolve,reject)=>{
-            let user= await db.get().collection('users').findOne({gmail:userdata.gmail}).then((response) => {
+            let user= await db.get().collection('users').findOne({email:userdata.email}).then((response) => {
                 return userobj = response
             })
-            
+            console.log(user);
             let response = {}
             if (user) {
                 
-                let validPassword = await bcrypt.compare(userdata.password,user.password)
+                let validPassword = await bcrypt.compare(userdata.pswd,user.pswd)
                 if(!validPassword){
                     console.log('login failed');
                     response.status = false
@@ -46,30 +46,5 @@ module.exports={
                     resolve(response)
             }
             })  
-    },
-    imgUpload:(data)=>{
-        return new Promise(async(resolve,reject)=>{
-           
-            console.log(data);
-            let img = data.imgurl
-            let id = data.userid
-            console.log(img,id);
-                cloudinary.v2.uploader.upload("https://media.istockphoto.com/photos/the-girl-standing-on-the-rocks-near-the-beach-with-beautiful-million-picture-id1142366551?b=1&k=20&m=1142366551&s=170667a&w=0&h=UI08guBTkXyI_C7R2pITkP6UB8qjk_YrFOfUTQ17mBM=",
-                { public_id:"olympic_flagfgd" }, 
-                function(error, result) {console.log(result); })
-
-            })  
-    },
-    createRoom:(room)=>{
-        return new Promise(async(resolve,reject)=>{
-            let r = await db.get().collection('rooms').findOne({room:room.room})
-            if (r) {
-                let roomstatus = false
-                resolve(roomstatus)
-            } else {
-                let roomstatus = true
-                resolve(roomstatus)
-            }
-        })
     },
 }
