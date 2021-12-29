@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const Register = () => {
-
-    const [name,setName] = useState('');
-    const [email,setEmail] = useState('');
-    const [pswd,setPswd] = useState('');
-
-    const PostData = ()=>{
-        fetch("/users/signup",{
+ 
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+    const [pswd,setPswd] = useState('')
+    const navigate = useNavigate()
+    const PostData = ()=>{ 
+        fetch("users/signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
-            }, 
+            },
             body:JSON.stringify({
                 name:name,
                 email:email,
@@ -20,6 +21,9 @@ const Register = () => {
         }).then(response=>response.json())
         .then(data=>{
             console.log(data);
+            if (data.signin) {
+                navigate('/product')
+            }
         })
     }
 

@@ -4,14 +4,15 @@ var db = require('./connection')
 
 module.exports={
     doSignup:(userdata)=>{
+
         return new Promise(async(resolve,reject)=>{
-            let user= await db.get().collection('users').findOne({gmail:userdata.gmail})
+            let user= await db.get().collection('users').findOne({gmail:userdata.email})
             if (user) {
                 let response = {}
                 response.signupstatus = false
                 resolve(response)
             } else {
-                userdata.password=await bcrypt.hash(userdata.password,10)
+                userdata.pswd=await bcrypt.hash(userdata.pswd,10)
                 db.get().collection('users').insertOne(userdata).then((response)=>{
                     response.signupstatus = true
                     resolve(response)

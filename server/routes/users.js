@@ -21,20 +21,18 @@ router.get('/signup', (req, res) => {
   })
   
   router.post('/signup', (req, res) => {
-    const {name,email,pswd} = req.body;
 
     fun.doSignup(req.body).then((response) => {
-      res.status(200).json('signup')
-      // if (response.signupstatus) {
-      //   session = req.session;
-      //   session.user = response.insertedId
-      //   session.loggedfalse = false
-      //   session.loggedIN = true
-      //   res.redirect('/')
-      // } else {
-      //   req.session.signupstatusfalse = true
-      //   res.redirect('/signup/')
-      // }
+      if (response.signupstatus) {
+        session = req.session;
+        session.loggedfalse = false
+        session.loggedIN = true
+        session.user = response.insertedId
+        res.status(200).json({signin:true})
+      } else {
+        req.session.signupstatusfalse = true
+        res.status(200).json('redirect to /signup/ ')
+      }
     })
   })
   

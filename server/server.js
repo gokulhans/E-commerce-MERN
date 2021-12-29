@@ -30,9 +30,6 @@ app.post("/post", (req, res) => {
 });
 
 
-// router setting
-var usersRouter = require('./routes/users');
-app.use('/users',usersRouter);
 
 //  session setup
 // creating 24 hours from milliseconds
@@ -40,20 +37,24 @@ const oneDay = 1000 * 60 * 60 * 24;
 
 //session middleware
 app.use(sessions({
-    secret: "thisismysecertkeyfhrgfgrfrty84fwir767",
+  secret: "thisismysecertkeyfhrgfgrfrty84fwir767",
     saveUninitialized:true,
     cookie: { maxAge: oneDay },
     resave: false
-}));
+  }));
+  
+// router setting
 
-
-// db connection
-db.connect((err)=>{
-  if(err) console.log("Connection Error"+err);
-  else console.log("Database connected to port")
-})
-
+  var usersRouter = require('./routes/users');
+  app.use('/users',usersRouter);
+  
+  // db connection
+  db.connect((err)=>{
+    if(err) console.log("Connection Error"+err);
+    else console.log("Database connected to port")
+  })
+  
 // server listening
 app.listen(PORT,()=>{
-    console.log(`server is listening on ${PORT}`);
+  console.log(`server is listening on ${PORT}`);
 })
