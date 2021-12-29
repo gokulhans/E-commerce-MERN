@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 
 const Register = () => {
 
-    const [name,setName] = useState('')
-    const [email,setEmail] = useState('')
-    const [pswd,setPswd] = useState('')
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [pswd,setPswd] = useState('');
 
     const PostData = ()=>{
-        fetch("users/signup",{
+        fetch("/users/signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
-            },
+            }, 
             body:JSON.stringify({
                 name:name,
                 email:email,
