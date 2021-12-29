@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
-
+import {getData} from './Product'
 
 const Login = () => {
-
+    
     var err
 
     const [email,setEmail] = useState('')
@@ -25,6 +25,7 @@ const Login = () => {
             if (!data.status) {
                 console.log('login failed');
             }else{
+                getData(data)
                 navigate('/product')
             }
         })
