@@ -12,12 +12,7 @@ const cors = require('cors');
 const sessions = require('express-session');
 var db = require('./connection');
 
-// git controller and tester....
-/*
-merging by kannappan
-*/
-// ends 
-
+  
 // middlewares 
 app.use(cors());
 
@@ -35,8 +30,8 @@ app.post("/post", (req, res) => {
 
 
 // router setting
-var indexRouter = require('./routes/index');
-app.use('/index',indexRouter);
+var usersRouter = require('./routes/users');
+app.use('/users',usersRouter);
 
 //  session setup
 // creating 24 hours from milliseconds
@@ -44,7 +39,7 @@ const oneDay = 1000 * 60 * 60 * 24;
 
 //session middleware
 app.use(sessions({
-    secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+    secret: "thisismysecertkeyfhrgfgrfrty84fwir767",
     saveUninitialized:true,
     cookie: { maxAge: oneDay },
     resave: false
