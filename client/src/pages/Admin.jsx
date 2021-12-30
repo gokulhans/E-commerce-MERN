@@ -21,6 +21,8 @@ const Admin = () => {
             <Link to="/register">Register</Link>
             <br/>
             <Link to="/login">Login</Link>
+            <br/>
+            <Link to="/add-product">Add Product</Link>
         </div>
     )
 }

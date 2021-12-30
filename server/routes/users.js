@@ -9,7 +9,6 @@ router.get('/',(req,res)=>{
 })
 
 
-
 router.get('/signup', (req, res) => {
     if (req.session) {
         if (req.session.signupstatusfalse) {

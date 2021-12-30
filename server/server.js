@@ -47,6 +47,9 @@ app.use(sessions({
 
   var usersRouter = require('./routes/users');
   app.use('/users',usersRouter);
+
+  var productsRouter = require('./routes/products');
+  app.use('/products',productsRouter);
   
   // db connection
   db.connect((err)=>{
