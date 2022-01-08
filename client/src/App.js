@@ -41,7 +41,6 @@ const getProduct = () =>{
           <Route path="/product" element={<Product data={state} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
-          
         </Routes>
 
         <Footer />

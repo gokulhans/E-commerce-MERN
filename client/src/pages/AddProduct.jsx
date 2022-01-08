@@ -6,7 +6,7 @@ const AddProduct = () => {
 
     const navigate = useNavigate()
 
-
+   
     const [item, setitem] = useState('');
     const [price, setprice] = useState('');
     const [type, settype] = useState('');
