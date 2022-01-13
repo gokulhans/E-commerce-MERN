@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
+        <>
         <div>
-            <nav style={{ position: 'relative', top: 0}} class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav style={{ position: 'relative', top: 0}} class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/">Amazone</a>
+                    <a class="navbar-brand" href="/"><b>Amazone</b></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -37,6 +38,9 @@ const Navbar = () => {
                 </div>
             </nav>
         </div>
+        <style>
+        </style>
+        </>
     )
 }
 
