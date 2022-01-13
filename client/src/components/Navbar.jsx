@@ -14,36 +14,12 @@ const Navbar = () => {
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav log me-auto mb-2 mb-lg-0">
-                                {/* <li class="nav-item m-1">
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/profile">Profile</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/product">Product</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/register">Register</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/login">Login</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/admin">Admin</Link>
-                                </li>
-                                <li class="nav-item m-1">
-                                    <Link to="/add-product">Add Product</Link>
-                                </li> */}
-
                                     <li class="nav-item m-1">
-                                        <Link to="/">Login</Link>
+                                        <Link to="/login">Login</Link>
                                     </li>
                                     <li class="nav-item m-1">
-                                        <Link to="/">Register</Link>
+                                        <Link to="/register">Register</Link>
                                     </li>
-                                
-
                             </ul>
                         </div>
                     </div>
