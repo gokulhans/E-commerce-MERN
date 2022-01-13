@@ -1,0 +1,18 @@
+ul{
+    color: white;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.log{
+    position: fixed;
+    right: 15px;
+}
