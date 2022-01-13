@@ -47,4 +47,10 @@ module.exports={
             }
             })  
     },
+    deleteAccount:(data)=>{
+        return new Promise(async(resolve,reject)=>{
+            db.get().collection('users').removeOne({_id:data.id})
+                    resolve('user deleted')
+            })  
+    },
 }

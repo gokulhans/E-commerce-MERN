@@ -4,7 +4,7 @@ var fun = require('../functions')
 var db = require('../connection')
 
 
-router.get('/',async (req,res)=>{
+router.get('/:name',async (req,res)=>{
     console.log('company');
     res.status(200).json('company');
 })
