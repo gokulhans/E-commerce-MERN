@@ -1,42 +1,49 @@
 import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
- 
-    const [name,setName] = useState('')
-    const [email,setEmail] = useState('')
-    const [pswd,setPswd] = useState('')
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [pswd, setPswd] = useState('')
+    const [type, setType] = useState('')
+
     const navigate = useNavigate()
-    const PostData = ()=>{ 
-        fetch("users/signup",{
-            method:"post",
-            headers:{
-                "Content-Type":"application/json"
+    const PostData = () => {
+        fetch("users/signup", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
             },
-            body:JSON.stringify({
-                name:name,
-                email:email,
-                pswd:pswd
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                pswd: pswd,
+                type:type,
             })
-        }).then(response=>response.json())
-        .then(data=>{
-            console.log(data);
-            if (data.signin) {
-                navigate('/product')
-            }
-        })
+        }).then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.signin) {
+                    navigate('/product')
+                }
+            })
     }
 
     return (
         <div>
-           <h3>This is Register Page </h3>
-           <input type="text" value={name} name='name' onChange={(e)=>{setName(e.target.value)}} />
-           <input type="text" value={email} name='email' onChange={(e)=>{setEmail(e.target.value)}} />
-           <input type="text" value={pswd} name='pswd' onChange={(e)=>{setPswd(e.target.value)}} />
-            <input type="submit" value="Sign UP" onClick={()=>PostData()} />
+            <h3>This is Register Page </h3>
+            <input type="text" value={name} name='name' onChange={(e) => { setName(e.target.value) }} />
+            <input type="text" value={email} name='email' onChange={(e) => { setEmail(e.target.value) }} />
+            <input type="text" value={pswd} name='pswd' onChange={(e) => { setPswd(e.target.value) }} />
+            <select name='type' value={type} onChange={(e) => { setType(e.target.value) }} >
+                <option value="user">User</option>
+                <option value="company"> Company</option>
+            </select>
+            <input type="submit" value="Sign UP" onClick={() => PostData()} />
         </div>
     )
-    
+
 }
 
 

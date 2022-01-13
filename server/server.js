@@ -46,10 +46,14 @@ app.use(sessions({
 // router setting
 
   var usersRouter = require('./routes/users');
-  app.use('/users',usersRouter);
-
   var productsRouter = require('./routes/products');
-  app.use('/products',productsRouter);
+  var cartRouter = require('./routes/cart');
+  var companyRouter = require('./routes/company');
+
+  app.use('/users',usersRouter);
+  app.use('/products',productsRouter)  
+  app.use('/cart',cartRouter)  
+  app.use('/company',companyRouter)  
   
   // db connection
   db.connect((err)=>{

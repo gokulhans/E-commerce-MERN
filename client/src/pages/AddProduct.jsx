@@ -27,7 +27,7 @@ const AddProduct = () => {
         }).then(response=>response.json())
         .then(data=>{
             console.log(data);
-            navigate('/product')
+            navigate('/')
         })
     }
 

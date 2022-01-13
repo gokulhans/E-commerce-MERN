@@ -5,7 +5,7 @@ var fun = require('../functions')
 
 
 router.get('/',(req,res)=>{
-    res.status(200).json('Hello index');
+    res.status(200).json('Hello users');
 })
 
 
@@ -64,10 +64,14 @@ router.get('/signup', (req, res) => {
   
   router.get('/logout', function (req, res) {
     req.session.destroy()
-    res.redirect('/');
+    res.status(200).json('logout redirecct');
+  });
+
+  router.delete('/:id', function (req, res) {
+    fun.deleteAccount(req.params)
+    res.status(200).json('deleted redirect');
   });
   
   
-
 
 module.exports = router;
