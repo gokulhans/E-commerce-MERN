@@ -14,21 +14,16 @@ import AddProduct from "./pages/AddProduct";
 
 
 function App() {
-  const [state, setstate] = useState('');
+ 
+  const [products, setproducts] = useState('');
 
-  useEffect(()=>{
-    getProduct()
-  },[])
-
-const getProduct = () =>{
-    console.log('sjdbfdhs');
-    fetch("product").then(response=>response.json())
-    .then(data=>{
-      console.log(data);
-        setstate(data)
-    })
-}
-
+  useEffect(() => {
+  fetch("products").then(response=>response.json())
+  .then(data=>{
+      setproducts(data)
+  })
+    },[]);
+console.log(products);
   return (
     <>
       <div>
@@ -38,7 +33,7 @@ const getProduct = () =>{
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product data={state} />} />
+          <Route path="/product" element={<Product data={products} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
         </Routes>

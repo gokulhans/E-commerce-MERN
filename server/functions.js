@@ -15,6 +15,7 @@ module.exports={
                 userdata.pswd=await bcrypt.hash(userdata.pswd,10)
                 db.get().collection('users').insertOne(userdata).then((response)=>{
                     response.signupstatus = true
+                    response.type = userdata.type
                     resolve(response)
                 })            
             }
@@ -38,6 +39,7 @@ module.exports={
                     console.log('login success');
                     response.status = true
                     response.user = userobj
+                    response.type = user.type
                     resolve(response)
                 }
             }else{
