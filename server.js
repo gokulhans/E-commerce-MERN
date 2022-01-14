@@ -2,11 +2,14 @@ if(process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const express = require('express');
 const app = express();
 
+if(process.env.NODE_ENV == 'production') {
+  app.use(express.static('client/build'))
+}
 
 const cors = require('cors');
 const sessions = require('express-session');
