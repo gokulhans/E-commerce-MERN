@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import './App.css'
 
 import { useEffect } from 'react'
 import AddProduct from "./pages/AddProduct";
