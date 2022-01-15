@@ -11,8 +11,3 @@ a:-webkit-any-link {
     font-size: 14px;
     font-weight: 500;
 }
-
-.log{
-    position: fixed;
-    right: 15px;
-}
