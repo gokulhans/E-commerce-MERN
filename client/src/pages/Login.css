@@ -1,18 +1,7 @@
-.main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
 .login-body{
-    height: 50vh;
-    width: 20vw;
-    margin: 20px;
-    padding: 20px;
+    height: 60vh;
+    width: 30vw;
+    padding: 30px;
     background-color: cadetblue;
     display: flex;
     flex-direction: column;
