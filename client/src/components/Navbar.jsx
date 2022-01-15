@@ -37,10 +37,10 @@ const Navbar = () => {
                                 </li> */}
 
                                     <li class="nav-item m-1">
-                                        <Link to="/">Login</Link>
+                                        <Link to="/login">Login</Link>
                                     </li>
                                     <li class="nav-item m-1">
-                                        <Link to="/">Register</Link>
+                                        <Link to="/register">Register</Link>
                                     </li>
                                 
 
