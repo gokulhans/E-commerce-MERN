@@ -11,40 +11,49 @@ import Footer from "./components/Footer";
 
 import { useEffect } from 'react'
 import AddProduct from "./pages/AddProduct";
+import Test from "./pages/Test";
 
 
 function App() {
  
   const [products, setproducts] = useState('');
+  const [role, setrole] = useState('');
+  const [login, setlogin] = useState('');
 
   useEffect(() => {
+    fetch("users").then(response=>response.json())
+    .then(data=>{
+      setlogin(data.login)
+      setrole(data.role)
+    })
   fetch("products").then(response=>response.json())
   .then(data=>{
       setproducts(data)
   })
 
-  fetch("/").then(response=>response.json())
-  .then(data=>{
-      console.log(data)
-  })
   
     },[]);
-console.log(products);
+    console.log(products);
+    console.log(role);
+    let state = {};
+    state.products = products
+    state.role = role
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar login={login} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/test" element={<Test/>} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product data={products} />} />
+          <Route path="/product" element={<Product state={state} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
         </Routes>
 
-        <Footer />
+        <Footer role={role} />
       </div>
     </>
   );

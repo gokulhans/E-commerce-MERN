@@ -25,7 +25,7 @@ const Login = () => {
             if (!data.status) {
                 console.log('login failed');
             }else{
-                navigate('/product')
+                navigate('/')
             }
         })
     }

@@ -1,10 +1,23 @@
 import React from 'react'
 import { Link } from "react-router-dom";
- 
-const Footer = () => {
+import './Footer.css'
+const Footer = (props) => {
+    const linkStyle = {
+        textDecoration: "none",
+        color: 'blue'
+      };
+
+    let add
+    let role = props.role
+    if (role) {
+        add = <li class="nav-item m-1">
+            <Link to="/add-product" style={linkStyle}>Add Product</Link>
+        </li>
+    }
+
     return (
         <div>
-            <div style={{position:'relative',bottom:0}} class="container">
+            <div style={{ position: 'relative', bottom: 0 }} class="container">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
 
@@ -13,26 +26,25 @@ const Footer = () => {
 
                     <ul class="nav col-md-4 justify-content-end">
                         <li class="nav-item m-1">
-                            <Link to="/">Home</Link>
+                            <Link to="/"  style={linkStyle} >Home</Link>
                         </li>
                         <li class="nav-item m-1">
-                            <Link to="/profile">Profile</Link>
+                            <Link to="/profile"  style={linkStyle}>Profile</Link>
                         </li>
                         <li class="nav-item m-1">
-                            <Link to="/product">Product</Link>
+                            <Link to="/product"  style={linkStyle}>Product</Link>
                         </li>
                         <li class="nav-item m-1">
-                            <Link to="/register">Register</Link>
+                            <Link to="/register" style={linkStyle}>Register</Link>
                         </li>
                         <li class="nav-item m-1">
-                            <Link to="/login">Login</Link>
+                            <Link to="/login" style={linkStyle}>Login</Link>
                         </li>
                         <li class="nav-item m-1">
-                            <Link to="/admin">Admin</Link>
+                            <Link to="/admin" style={linkStyle}>Admin</Link>
                         </li>
-                        <li class="nav-item m-1">
-                             <Link to="/add-product">Add Product</Link>              
-                      </li>
+                        {add}
+
                     </ul>
                 </footer>
             </div>
