@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 
 import { useEffect } from 'react'
 import AddProduct from "./pages/AddProduct";
-import Test from "./pages/Test";
 
 
 function App() {
@@ -24,9 +23,9 @@ function App() {
       setproducts(data)
   })
 
-  fetch("products").then(response=>response.json())
+  fetch("/").then(response=>response.json())
   .then(data=>{
-      setproducts(data)
+      console.log(data)
   })
   
     },[]);
@@ -46,7 +45,6 @@ console.log(products);
         </Routes>
 
         <Footer />
-        <Test/>
       </div>
     </>
   );
