@@ -35,11 +35,30 @@ const AddProduct = () => {
 
     return (
         <div>
-            <input type="text" placeholder='item' onChange={(e)=>setitem(e.target.value)} />
-            <input type="text" placeholder='type' onChange={(e)=>settype(e.target.value)} />
-            <input type="text" placeholder='description' onChange={(e)=>setdes(e.target.value)} />
-            <input type="text" placeholder='price' onChange={(e)=>setprice(e.target.value)} />
-            <input type="button" value="Add Product" onClick={()=>PostData()} />
+          
+
+  <div class="form-outline mb-4">
+    <input type="text" id="form5Example1" class="form-control" onChange={(e)=>setitem(e.target.value)}  />
+    <label class="form-label" for="form5Example1">Item</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="form5Example2" class="form-control" onChange={(e)=>setdes(e.target.value)} />
+    <label class="form-label" for="form5Example2">Description</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="form5Example2" class="form-control" onChange={(e)=>setprice(e.target.value)} />
+    <label class="form-label" for="form5Example2">Description</label>
+  </div>
+
+  <div class="form-check d-flex justify-content-center mb-4">
+    <input class="form-check-input me-2" type="checkbox" value="" id="form5Example3" checked />
+    <label class="form-check-label" for="form5Example3">
+      I have read and agree to the terms
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block mb-4" onClick={()=>PostData()} >Add Item</button>
+
         </div>
     )
 }
