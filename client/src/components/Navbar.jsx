@@ -8,19 +8,21 @@ const Navbar = () => {
 
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand"><Link to="/">Trends</Link></a>
+                    
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav items me-auto mb-2 mb-lg-0">
-                            <li class="nav-item m-1">
-                                <Link to="/login">Login</Link>
-                            </li>
-                            <li class="nav-item m-1">
-                                <Link to="/register">Register</Link>
-                            </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <div className="items m-3">
+                                <Link className="link" to="/">Home</Link>
+                                <Link className="link" to="/add-product">Add Product</Link>
+                                <Link className="link" to="/admin">Admin</Link>
+                                <Link className="link" to="/product">Products</Link>
+                            </div>
+                            <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
+                            <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
+                            <div class="m-2 circle" type="submit"><Link to="/profile">P</Link></div>
                         </form>
                     </div>
                 </div>

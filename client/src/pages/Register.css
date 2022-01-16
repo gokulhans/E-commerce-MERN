@@ -1,0 +1,14 @@
+.register-body{
+    height: 60vh;
+    width: 30vw;
+    padding: 30px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
