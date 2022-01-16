@@ -7,3 +7,9 @@
     flex-direction: column;
     border-radius: 0.2rem;
 }
+
+input{
+    outline-color:black;
+    outline-width: 5px;
+    color: black;
+}

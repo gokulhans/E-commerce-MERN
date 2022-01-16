@@ -51,7 +51,7 @@ const AddProduct = () => {
   </div>
 
   <div class="form-check d-flex justify-content-center mb-4">
-    <input class="form-check-input me-2" type="checkbox" value="" id="form5Example3" checked />
+    <input class="form-check-input me-2" type="checkbox" value="" id="form5Example3"  />
     <label class="form-check-label" for="form5Example3">
       I have read and agree to the terms
     </label>
