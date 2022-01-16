@@ -19,21 +19,13 @@ const Footer = (props) => {
         <div>
             <div style={{ position: 'relative', bottom: 0 }} class="container">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                    <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
+                    <p class="col-md-4 mb-0 text-muted">&copy; 2021 gbroz Company, Inc</p>
 
                     <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     </a>
 
                     <ul class="nav col-md-4 justify-content-end">
-                        <li class="nav-item m-1">
-                            <Link to="/"  style={linkStyle} >Home</Link>
-                        </li>
-                        <li class="nav-item m-1">
-                            <Link to="/profile"  style={linkStyle}>Profile</Link>
-                        </li>
-                        <li class="nav-item m-1">
-                            <Link to="/product"  style={linkStyle}>Product</Link>
-                        </li>
+
                         <li class="nav-item m-1">
                             <Link to="/register" style={linkStyle}>Register</Link>
                         </li>
@@ -44,7 +36,7 @@ const Footer = (props) => {
                             <Link to="/admin" style={linkStyle}>Admin</Link>
                         </li>
                         {add}
-
+                        
                     </ul>
                 </footer>
             </div>
