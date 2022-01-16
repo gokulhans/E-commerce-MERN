@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
-const Register = () => {
+const ShopRegister = () => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -34,7 +34,7 @@ const Register = () => {
     return (
         <>
             <div className="main">
-                <h3>Register</h3>
+                <h3>Register Shop</h3>
 
                 <section class="vh-100">
                     <div class="container-fluid h-custom">
@@ -64,7 +64,7 @@ const Register = () => {
                                         <input type="password" class="form-control form-control-lg"
                                             placeholder="Enter password" value={pswd} name='pswd' onChange={(e) => { setPswd(e.target.value) }} />
                                     </div>
-                         
+
                                     <select class="form-select mb-2" aria-label="Default select example" name='type' value={type} onChange={(e) => { setType(e.target.value) }}>
                                         <option selected value="user">User</option>
                                         <option value="company"> Company</option>
@@ -84,7 +84,6 @@ const Register = () => {
                                         <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href='/login'
                                             class="link-danger"  >Login</a></p>
                                     </div>
-
                                 </form>
                             </div>
                         </div>
@@ -101,4 +100,4 @@ const Register = () => {
 
 
 
-export default Register
+export default ShopRegister

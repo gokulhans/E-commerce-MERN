@@ -18,7 +18,7 @@ const Product = (props) => {
                             <div class="view zoom overlay">
                                 <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.webp" alt="Sample" />
                                 <h4 class="mb-0"><span class="badge badge-primary badge-pill badge-news">Sale</span></h4>
-                                <a href="#!">
+                                <a href="">
                                     <div class="mask">
                                         <img class="img-fluid w-100"
                                             src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.webp" alt='ffd'/>

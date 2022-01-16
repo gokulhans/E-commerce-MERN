@@ -9,7 +9,6 @@ import Admin from "./pages/Admin";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './App.css'
-
 import { useEffect } from 'react'
 import AddProduct from "./pages/AddProduct";
 import Test from "./pages/Test";
@@ -19,6 +18,9 @@ import Payment from "./pages/Payment";
 import Delivary from "./pages/Delivery";
 import History from "./pages/History";
 import Track from "./pages/Track";
+import ShopRegister from "./pages/ShopRegister";
+import ShopLogin from "./pages/ShopLogin";
+import ShopProfile from "./pages/ShopProfile";
 
 
 function App() {
@@ -64,8 +66,10 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/delivery" element={<Delivary />} />
           <Route path="/track" element={<Track />} />
+          <Route path="/shop-register" element={<ShopRegister />} />
+          <Route path="/shop-login" element={<ShopLogin />} />
+          <Route path="/shop-profile" element={<ShopProfile />} />
         </Routes>
-
         <Footer role={role} />
       </div>
     </>

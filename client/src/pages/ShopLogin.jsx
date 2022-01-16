@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
-const Login = () => {
+const ShopLogin = () => {
 
     var err
 
@@ -35,7 +35,7 @@ const Login = () => {
     return (
 
         <div className="main container">
-            <h2 className="mt-3">Login</h2>
+            <h2 className="mt-3">Login to your Shop</h2>
             
 
             <section class="vh-100">
@@ -88,4 +88,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default ShopLogin

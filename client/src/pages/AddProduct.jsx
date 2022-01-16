@@ -41,8 +41,8 @@ const AddProduct = () => {
                     <h3>Add Product</h3>
                     <div>
 
-                        <div class="form mb-2">
-                            <label for="form5Example1">Item</label>
+                        <div class="form mb-2 mt-2">
+                            <label for="form5Example1">Product Name</label>
                             <input type="text" id="form5Example1" class="form-control" onChange={(e) => setitem(e.target.value)} />
                         </div>
                         <div class="form mb-2">
