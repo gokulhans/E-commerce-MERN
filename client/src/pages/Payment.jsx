@@ -1,7 +1,14 @@
 import React from 'react'
 import './Payment.css'
 
+
 function Payment() {
+
+
+    // $(function() {
+    //     $('[data-toggle="tooltip"]').tooltip()
+    //     })
+    
     return (
         <div>
             <div class="container py-5">
