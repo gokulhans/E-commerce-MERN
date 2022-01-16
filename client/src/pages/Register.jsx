@@ -26,7 +26,7 @@ const Register = () => {
             .then(data => {
                 console.log(data);
                 if (data.signin) {
-                    navigate('/product')
+                    navigate('/')
                 }
             })
     }

@@ -1,0 +1,8 @@
+.card{
+    width: 200px;
+    height: auto;
+}
+
+.row{
+    display: flex;
+}
