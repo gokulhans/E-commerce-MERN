@@ -45,6 +45,10 @@ const Navbar = (props) => {
                                 <Link className="link" to="/add-product">Add Product</Link>
                                 <Link className="link" to="/admin">Admin</Link>
                                 <Link className="link" to="/product">Products</Link>
+                                <Link className="link" to="/cart">Cart</Link>
+                                <Link className="link" to="/billing">Billing</Link>
+                                <Link className="link" to="/payment">Payment</Link>
+                                <Link className="link" to="/history">History</Link>
                             </div>
                             {component}
                             <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>

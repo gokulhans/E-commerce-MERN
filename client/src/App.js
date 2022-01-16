@@ -13,6 +13,11 @@ import './App.css'
 import { useEffect } from 'react'
 import AddProduct from "./pages/AddProduct";
 import Test from "./pages/Test";
+import Cart from "./pages/Cart";
+import Billing from "./pages/Billing";
+import Payment from "./pages/Payment";
+import Delivary from "./pages/Delivary";
+import History from "./pages/History";
 
 
 function App() {
@@ -52,6 +57,11 @@ function App() {
           <Route path="/product" element={<Product state={state} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/delivary" element={<Delivary />} />
         </Routes>
 
         <Footer role={role} />
