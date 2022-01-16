@@ -16,8 +16,7 @@ const Navbar = (props) => {
     }
     return (
         <>
-<<<<<<< HEAD
-            <div>
+            {/* <div>
         <Link to="/test">Test</Link>
                 <nav style={{ position: 'relative', top: 0 }} class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
@@ -26,16 +25,16 @@ const Navbar = (props) => {
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            {component}
+                            
                         </div>
                     </div>
                 </nav>
-            </div>
-=======
+            </div> */}
+
 
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand"><Link to="/">Trends</Link></a>
+                    <a class="navbar-brand"><Link to="/"><b>Trends</b></Link></a>
                     
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -47,15 +46,14 @@ const Navbar = (props) => {
                                 <Link className="link" to="/admin">Admin</Link>
                                 <Link className="link" to="/product">Products</Link>
                             </div>
-                            <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
-                            <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
+                            {component}
+                            {/* <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
+                            <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button> */}
                             <div class="m-2 circle" type="submit"><Link to="/profile">P</Link></div>
                         </form>
                     </div>
                 </div>
             </nav>
-
->>>>>>> f9ba06d4d7ad89d476f7824678b91668f7a230b3
         </>
     )
 }
