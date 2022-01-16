@@ -47,8 +47,8 @@ const Navbar = (props) => {
                                 <Link className="link" to="/product">Products</Link>
                             </div>
                             {component}
-                            {/* <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
-                            <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button> */}
+                            <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
+                            <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
                             <div class="m-2 circle" type="submit"><Link to="/profile">P</Link></div>
                         </form>
                     </div>
