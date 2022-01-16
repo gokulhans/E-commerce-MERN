@@ -49,6 +49,8 @@ const Navbar = (props) => {
                                 <Link className="link" to="/billing">Billing</Link>
                                 <Link className="link" to="/payment">Payment</Link>
                                 <Link className="link" to="/history">History</Link>
+                                <Link className="link" to="/delivery">Delivery</Link>
+                                <Link className="link" to="/track">Track Ur Order</Link>
                             </div>
                             {component}
                             <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>

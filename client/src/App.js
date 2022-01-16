@@ -16,8 +16,9 @@ import Test from "./pages/Test";
 import Cart from "./pages/Cart";
 import Billing from "./pages/Billing";
 import Payment from "./pages/Payment";
-import Delivary from "./pages/Delivary";
+import Delivary from "./pages/Delivery";
 import History from "./pages/History";
+import Track from "./pages/Track";
 
 
 function App() {
@@ -61,7 +62,8 @@ function App() {
           <Route path="/billing" element={<Billing />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/history" element={<History />} />
-          <Route path="/delivary" element={<Delivary />} />
+          <Route path="/delivery" element={<Delivary />} />
+          <Route path="/track" element={<Track />} />
         </Routes>
 
         <Footer role={role} />
