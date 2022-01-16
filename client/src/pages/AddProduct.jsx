@@ -34,33 +34,34 @@ const AddProduct = () => {
 
 
     return (
+        <>
+            <div className="main">
+                <div className="addproduct">
+                    <h3>Add Product</h3>
+                    <div>
 
-        <div className="main">
-            <div className="addproduct">
-                <h3>Add Product</h3>
-                <div>
-
-                    <div class="form mb-2">
-                        <label for="form5Example1">Item</label>
-                        <input type="text" id="form5Example1" class="form-control" onChange={(e) => setitem(e.target.value)} />
+                        <div class="form mb-2">
+                            <label for="form5Example1">Item</label>
+                            <input type="text" id="form5Example1" class="form-control" onChange={(e) => setitem(e.target.value)} />
+                        </div>
+                        <div class="form mb-2">
+                            <label for="form5Example2">Description</label>
+                            <input type="text" id="form5Example2" class="form-control" onChange={(e) => setdes(e.target.value)} />
+                        </div>
+                        <div class="form mb-2">
+                            <label for="form5Example2">Description</label>
+                            <input type="text" id="form5Example2" class="form-control" onChange={(e) => setprice(e.target.value)} />
+                        </div>
+                        <div class="form d-flex justify-content-center mb-4">
+                            <label class="form-label">
+                                click add button to add products in your e-shope
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mb-4" onClick={() => PostData()} >Add</button>
                     </div>
-                    <div class="form mb-2">
-                        <label for="form5Example2">Description</label>
-                        <input type="text" id="form5Example2" class="form-control" onChange={(e) => setdes(e.target.value)} />
-                    </div>
-                    <div class="form mb-2">
-                        <label for="form5Example2">Description</label>
-                        <input type="text" id="form5Example2" class="form-control" onChange={(e) => setprice(e.target.value)} />
-                    </div>
-                    <div class="form d-flex justify-content-center mb-4">
-                        <label class="form-label">
-                            click add button to add products in your e-shope
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block mb-4" onClick={() => PostData()} >Add</button>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

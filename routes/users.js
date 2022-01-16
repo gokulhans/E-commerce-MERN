@@ -37,7 +37,7 @@ router.get('/signup', (req, res) => {
 
     fun.doSignup(req.body).then((response) => {
       if (response.signupstatus) {
-        session = req.session;
+        var session = req.session;
         session.type = response.type
         session.loggedfalse = false
         session.loggedIN = true
