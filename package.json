@@ -5,6 +5,9 @@
     "node": "v16.13.2"
   },
   "private": true,
+  "engines": {
+    "node": "v16.13.1"
+  },
   "scripts": {
     "start": "node server.js"
   },
