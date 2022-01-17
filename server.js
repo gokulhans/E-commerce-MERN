@@ -25,9 +25,9 @@ app.use(cors());
 
 // getting and posting methods
 
-// app.get('/',(req,res)=>{
-//     res.send('Welcome to Backend! Bitch ')
-// })
+app.get('/',(req,res)=>{
+    res.send('Welcome to Backend! working')
+})
 
 app.post("/post", (req, res) => {
   console.log("Connected to React");
@@ -53,12 +53,12 @@ app.use(sessions({
   var usersRouter = require('./routes/users');
   var productsRouter = require('./routes/products');
   var cartRouter = require('./routes/cart');
-  var companyRouter = require('./routes/company');
+  var shopRouter = require('./routes/shop');
 
   app.use('/users',usersRouter);
   app.use('/products',productsRouter)
   app.use('/cart',cartRouter)
-  app.use('/company',companyRouter)
+  app.use('/shop',shopRouter)
 
   // db connection
   db.connect((err)=>{

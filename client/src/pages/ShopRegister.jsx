@@ -10,6 +10,8 @@ const ShopRegister = () => {
     const [type, setType] = useState('')
 
     const navigate = useNavigate()
+
+
     const PostData = () => {
         fetch("shop/signup", {
             method: "post",
@@ -65,9 +67,8 @@ const ShopRegister = () => {
                                             placeholder="Enter password" value={pswd} name='pswd' onChange={(e) => { setPswd(e.target.value) }} />
                                     </div>
 
-                                    <select class="form-select mb-2" aria-label="Default select example" name='type' value={type} onChange={(e) => { setType(e.target.value) }}>
-                                        <option selected value="user">User</option>
-                                        <option value="company"> Company</option>
+                                    <select disabled class="form-select mb-2" aria-label="Default select example" name='type' value={type} onChange={(e) => { setType(e.target.value) }}>
+                                        <option value="company">Shop</option>
                                     </select>
 
                                     <div class="d-flex justify-content-between align-items-center">
@@ -81,7 +82,7 @@ const ShopRegister = () => {
 
                                     <div class="text-center text-lg-start mt-2 pt-2">
                                         <button type="button" class="btn btn-primary btn-lg" onClick={() => PostData()} >Register</button>
-                                        <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href='/login'
+                                        <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href='/shop-login'
                                             class="link-danger"  >Login</a></p>
                                     </div>
                                 </form>
