@@ -11,7 +11,7 @@ const ShopRegister = () => {
 
     const navigate = useNavigate()
     const PostData = () => {
-        fetch("users/signup", {
+        fetch("shop/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
