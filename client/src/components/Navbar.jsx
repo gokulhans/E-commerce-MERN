@@ -15,7 +15,7 @@ const Navbar = (props) => {
         <>
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand"><Link to="/"><b>Trends</b></Link></a>
+                    <a class="navbar-brand"><Link to="/"><b>Fasino</b></Link></a>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
