@@ -25,18 +25,19 @@ const Footer = (props) => {
                     </a>
 
                     <ul class="nav col-md-4 justify-content-end">
-
-                        <li class="nav-item m-1">
-                            <Link to="/register" style={linkStyle}>Register</Link>
-                        </li>
-                        <li class="nav-item m-1">
-                            <Link to="/login" style={linkStyle}>Login</Link>
-                        </li>
                         <li class="nav-item m-1">
                             <Link to="/admin" style={linkStyle}>Admin</Link>
                         </li>
+                        <li class="nav-item m-1">
+                            <Link to="/shop-register" style={linkStyle}>ShopRegister</Link>
+                        </li>
+                        <li class="nav-item m-1">
+                            <Link to="/shop-login" style={linkStyle}>ShopLogin</Link>
+                        </li>
+                        <li class="nav-item m-1">
+                            <Link to="/shop-profile" style={linkStyle}>ShopProfile</Link>
+                        </li>
                         {add}
-                        
                     </ul>
                 </footer>
             </div>
