@@ -50,10 +50,16 @@ function App() {
   let state = {};
   state.products = products
   state.role = role
+
+  let navbar = {login:'',user:''}
+  navbar.login = login
+  navbar.user = user
+
+
   return (
     <>
       <div>
-        <Navbar login={login} />
+        <Navbar navbar={navbar} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<Test />} />
