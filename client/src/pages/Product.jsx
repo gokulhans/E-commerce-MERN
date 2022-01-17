@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Product.css'
 
 const Product = (props) => {
@@ -8,6 +8,8 @@ const Product = (props) => {
     if (state.role) {
         var deletebtn = <h1>delete</h1>
     }
+    const [id, setid] = useState('')
+    console.log('id'+id);
     return (
         
         <div class="row">
@@ -41,12 +43,13 @@ const Product = (props) => {
                                 <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
                                     <i class="fas fa-shopping-cart pr-2"></i>Add to cart
                                 </button>
-                                <button type="button" class="btn btn-light btn-sm mr-1 mb-2">
-                                    <i class="fas fa-info-circle pr-2"></i>Details
-                                </button>
+                                <a class="btn btn-light btn-sm mr-1 mb-2">
+                                    <i class="fas fa-info-circle pr-2"></i> Details
+                                </a>
                                 <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
                                     <i class="far fa-heart"></i>
                                 </button>
+                                <button onClick={()=>{setid(product.price)}}>ID</button>
                             {deletebtn}
                             </div>
 

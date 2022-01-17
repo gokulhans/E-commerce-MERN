@@ -19,6 +19,7 @@ import Payment from "./pages/Payment";
 import Delivary from "./pages/Delivery";
 import History from "./pages/History";
 import Track from "./pages/Track";
+import SingleProduct from "./pages/SingleProduct";
 
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product state={state} />} />
+          <Route exact path="/product" element={<Product state={state} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/cart" element={<Cart />} />
@@ -64,6 +65,7 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/delivery" element={<Delivary />} />
           <Route path="/track" element={<Track />} />
+          <Route path="/product/:id" element={<SingleProduct />} />
         </Routes>
 
         <Footer role={role} />
