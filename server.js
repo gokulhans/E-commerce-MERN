@@ -62,6 +62,6 @@ app.use(sessions({
   })
   
 // server listening
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
   console.log(`server is listening on ${PORT}`);
 })
