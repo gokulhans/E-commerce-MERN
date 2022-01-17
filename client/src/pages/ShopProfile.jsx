@@ -11,7 +11,7 @@ const ShopProfile = () => {
 
                 <div class="card">
                     <div class="imgBox">
-                        <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png" alt="mouse corsair" class="mouse" />
+                        <img src="" alt="mouse corsair" class="mouse" />
                     </div>
                     <div class="contentBox">
                         <h3>Mouse Corsair M65</h3>
@@ -21,7 +21,7 @@ const ShopProfile = () => {
                 </div>
                 <div class="card">
                     <div class="imgBox">
-                        <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png" alt="mouse corsair" class="mouse" />
+                        <img src="" alt="mouse corsair" class="mouse" />
                     </div>
                     <div class="contentBox">
                         <h3>Mouse Corsair M65</h3>
@@ -32,7 +32,7 @@ const ShopProfile = () => {
                 <div class="card">
                     
                     <div class="imgBox">
-                        <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png" alt="mouse corsair" class="mouse" />
+                        <img src="" alt="mouse corsair" class="mouse" />
                     </div>
                     <div class="contentBox">
                         <h3>Mouse Corsair M65</h3>

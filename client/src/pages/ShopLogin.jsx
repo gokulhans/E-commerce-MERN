@@ -12,7 +12,7 @@ const ShopLogin = () => {
     const PostData = () => {
         console.log('clicked the hell');
         console.log(pswd,email);
-        fetch("users/login", {
+        fetch("shop/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"

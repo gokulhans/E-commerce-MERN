@@ -55,4 +55,50 @@ module.exports={
                     resolve('user deleted')
             })  
     },
+    ShopSignup:(userdata)=>{
+
+        return new Promise(async(resolve,reject)=>{
+            let user= await db.get().collection('users').findOne({email:userdata.email})
+            if (user) {
+                let response = {}
+                response.signupstatus = false
+                resolve(response)
+            } else {
+                userdata.pswd=await bcrypt.hash(userdata.pswd,10)
+                db.get().collection('shops').insertOne(userdata).then((response)=>{
+                    response.signupstatus = true
+                    response.type = userdata.type
+                    resolve(response)
+                })            
+            }
+        })
+    }, 
+    ShopLogin:(userdata)=>{
+        return new Promise(async(resolve,reject)=>{
+            let user= await db.get().collection('shops').findOne({email:userdata.email}).then((response) => {
+                return userobj = response
+            })
+            console.log(user);
+            let response = {}
+            if (user) {
+                
+                let validPassword = await bcrypt.compare(userdata.pswd,user.pswd)
+                if(!validPassword){
+                    console.log('login failed');
+                    response.status = false
+                    resolve(response)
+                }else {
+                    console.log('login success');
+                    response.status = true
+                    response.user = userobj
+                    response.type = user.type
+                    resolve(response)
+                }
+            }else{
+                console.log('login failed');
+                    response.status = false
+                    resolve(response)
+            }
+            })  
+    },
 }

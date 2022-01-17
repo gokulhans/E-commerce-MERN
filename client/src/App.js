@@ -25,36 +25,34 @@ import ShopProfile from "./pages/ShopProfile";
 
 
 function App() {
- 
+
   const [products, setproducts] = useState('');
   const [role, setrole] = useState('');
   const [login, setlogin] = useState('');
 
   useEffect(() => {
-    fetch("users").then(response=>response.json())
-    .then(data=>{
-      setlogin(data.login)
-      setrole(data.role)
-    })
-  fetch("products").then(response=>response.json())
-  .then(data=>{
-      setproducts(data)
-  })
+    fetch("users").then(response => response.json())
+      .then(data => {
+        setlogin(data.login)
+        setrole(data.role)
+      })
+    fetch("products").then(response => response.json())
+      .then(data => {
+        setproducts(data)
+      })
 
-  
-    },[]);
-    console.log(products);
-    console.log(role);
-    let state = {};
-    state.products = products
-    state.role = role
+
+  }, []);
+  let state = {};
+  state.products = products
+  state.role = role
   return (
     <>
       <div>
         <Navbar login={login} />
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/test" element={<Test/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/test" element={<Test />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -79,4 +77,3 @@ function App() {
 }
 
 export default App;
- 
