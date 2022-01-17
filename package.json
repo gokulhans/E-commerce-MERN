@@ -1,19 +1,14 @@
 {
-  "name": "E-commerce",
+  "name": "e-commerce",
   "version": "0.0.0",
-  "engines": {
-    "node": "v16.13.2"
-  },
   "private": true,
   "scripts": {
-    "start": "concurrently \"node server.js\" \"npm run client\"",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
