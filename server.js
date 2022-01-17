@@ -6,14 +6,14 @@ const PORT = 8000;
 
 const express = require('express');
 const app = express();
-const path = require('path');
+// const path = require('path');
 
 const cors = require('cors');
 const sessions = require('cookie-session');
 var db = require('./connection');
 
-  
-// middlewares 
+
+// middlewares
 app.use(express.json())
 app.use(cors());
 
@@ -47,7 +47,7 @@ app.use(sessions({
     cookie: { maxAge: oneDay },
     resave: false
   }));
-  
+
 // router setting
 
   var usersRouter = require('./routes/users');
@@ -56,16 +56,16 @@ app.use(sessions({
   var companyRouter = require('./routes/company');
 
   app.use('/users',usersRouter);
-  app.use('/products',productsRouter)  
-  app.use('/cart',cartRouter)  
-  app.use('/company',companyRouter)  
-  
+  app.use('/products',productsRouter)
+  app.use('/cart',cartRouter)
+  app.use('/company',companyRouter)
+
   // db connection
   db.connect((err)=>{
     if(err) console.log("Connection Error"+err);
     else console.log("Database connected to port")
   })
-  
+
 // server listening
 app.listen(process.env.PORT || PORT,()=>{
   console.log(`server is listening on ${PORT}`);
