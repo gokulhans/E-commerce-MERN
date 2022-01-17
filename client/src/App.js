@@ -36,36 +36,16 @@ function App() {
       .then(data => {
         setlogin(data.login)
         setrole(data.role)
-<<<<<<< HEAD
-        setuser(data.user)
-=======
->>>>>>> shop
+      })
+    fetch("shop").then(response => response.json())
+      .then(data => {
+        setlogin(data.login)
+        setrole(data.role)
       })
     fetch("products").then(response => response.json())
       .then(data => {
         setproducts(data)
       })
-
-<<<<<<< HEAD
-
-  }, []);
-  console.log(products);
-  console.log(role);
-  console.log('login'+login);
-  let state = {};
-  state.products = products
-  state.role = role
-
-  let navbar = {}
-  navbar.login = login
-  navbar.user = user
-  return (
-    <>
-      <div>
-        <Navbar navbar={navbar} />
-        <Routes> 
-=======
-
   }, []);
   let state = {};
   state.products = products
@@ -75,7 +55,6 @@ function App() {
       <div>
         <Navbar login={login} />
         <Routes>
->>>>>>> shop
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<Test />} />
           <Route path="/admin" element={<Admin />} />
