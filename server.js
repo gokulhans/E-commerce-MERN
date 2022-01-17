@@ -6,6 +6,7 @@ const PORT = 8000;
 
 const express = require('express');
 const app = express();
+const path = require('path');
 
 
 const cors = require('cors');
@@ -17,12 +18,17 @@ var db = require('./connection');
 app.use(express.json())
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // getting and posting methods
 
-app.get('/',(req,res)=>{
-    res.send('Welcome to Backend! Bitch ')
-})
+// app.get('/',(req,res)=>{
+//     res.send('Welcome to Backend! Bitch ')
+// })
 
 app.post("/post", (req, res) => {
   console.log("Connected to React");
