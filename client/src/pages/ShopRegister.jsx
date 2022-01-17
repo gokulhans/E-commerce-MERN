@@ -17,7 +17,7 @@ const ShopRegister = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: name,
+                name: name, 
                 email: email,
                 pswd: pswd,
                 type: type,
