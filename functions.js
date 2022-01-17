@@ -16,6 +16,7 @@ module.exports={
                 db.get().collection('users').insertOne(userdata).then((response)=>{
                     response.signupstatus = true
                     response.type = userdata.type
+                    response.user = userdata
                     resolve(response)
                 })            
             }
@@ -38,7 +39,7 @@ module.exports={
                 }else {
                     console.log('login success');
                     response.status = true
-                    response.user = userobj
+                    response.user = user
                     response.type = user.type
                     resolve(response)
                 }

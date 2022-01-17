@@ -5,9 +5,7 @@ var db = require('../connection')
 
 
 router.get('/',async (req,res)=>{
-  console.log('calling....');
     let product = await db.get().collection('products').find({}).toArray()
-    console.log(product);
     res.json(product);
 })
 

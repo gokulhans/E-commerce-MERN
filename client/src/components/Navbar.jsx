@@ -2,15 +2,29 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
-const Navbar = (props) =>   {
-    let login = props.login
-    if (!login) {
+const Navbar = (props) => {
+
+
+
+    let navbar = props.navbar
+    if (!navbar.login) {
         var component =
             <div>
                 <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
                 <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
             </div>
     }
+    // const Logout = (e) => {
+
+    //     fetch("users/logout").then(response => response.json())
+    //         .then(data => {
+    //             login = data
+    //         })
+    // }
+    // if (login) {
+    //     var logout = <button class="m-2 btn btn-outline-danger" onClick={(e) => { Logout(e) }} type="submit">LOGOUT</button>
+    // }
+
     return (
         <>
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -33,8 +47,10 @@ const Navbar = (props) =>   {
                                 <Link className="link" to="/delivery">Delivery</Link>
                                 <Link className="link" to="/track">Track Ur Order</Link>
                             </div>
-                            {component}
-                            <div class="m-2 circle" type="submit"><Link to="/profile">P</Link></div>
+                <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
+                     
+                                                {component} 
+
                         </form>
                     </div>
                 </div>
