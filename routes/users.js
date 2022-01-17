@@ -9,10 +9,8 @@ router.get('/',(req,res)=>{
   var response = {}
   if (req.session.loggedIN) {
     response.login = true
-  }
-  if (req.session.type == 'company'){
-    response.login = true
-    response.role = true
+    response.user = req.session.user
+    console.log(response);
     res.json(response);
   }
   else {
@@ -37,12 +35,11 @@ router.get('/signup', (req, res) => {
 
     fun.doSignup(req.body).then((response) => {
       if (response.signupstatus) {
-        var session = req.session;
-        session.type = response.type
-        session.loggedfalse = false
-        session.loggedIN = true
-        session.user = response.insertedId
-        res.status(200).json({signin:true})
+        req.session.type = response.type
+        req.session.loggedfalse = false
+        req.session.loggedIN = true
+        req.session.user = response.session
+        res.status(200).json({signin:true,user:response.session})
       } else {
         req.session.signupstatusfalse = true
         res.status(200).json('redirect to /signup/ ')
@@ -65,7 +62,7 @@ router.get('/signup', (req, res) => {
   router.post('/login', (req, res) => {
     fun.doLogin(req.body).then((response) => {
       if (response.status) {
-        req.session.user = String(response.user._id)
+        req.session.user = response.user
         req.session.loggedfalse = false
         req.session.loggedIN = true
         req.session.type = response.type
@@ -80,7 +77,8 @@ router.get('/signup', (req, res) => {
   
   router.get('/logout', function (req, res) {
     req.session.destroy()
-    res.status(200).json('logout redirecct');
+    let login = false
+    res.status(200).json(login);
   });
 
   router.delete('/:id', function (req, res) {
