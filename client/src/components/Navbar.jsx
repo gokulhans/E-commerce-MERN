@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
-const Navbar = (props) => {
+const Navbar = (props) =>   {
     let login = props.login
     if (!login) {
         var component =

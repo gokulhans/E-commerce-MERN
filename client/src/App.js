@@ -18,9 +18,13 @@ import Payment from "./pages/Payment";
 import Delivary from "./pages/Delivery";
 import History from "./pages/History";
 import Track from "./pages/Track";
+<<<<<<< HEAD
+import SingleProduct from "./pages/SingleProduct";
+=======
 import ShopRegister from "./pages/ShopRegister";
 import ShopLogin from "./pages/ShopLogin";
 import ShopProfile from "./pages/ShopProfile";
+>>>>>>> 0151b6865a1c29c1056a6f9ebf470e8573e6fa8a
 
 
 function App() {
@@ -57,7 +61,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product state={state} />} />
+          <Route exact path="/product" element={<Product state={state} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/cart" element={<Cart />} />
@@ -66,9 +70,13 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/delivery" element={<Delivary />} />
           <Route path="/track" element={<Track />} />
+<<<<<<< HEAD
+          <Route path="/product/:id" element={<SingleProduct />} />
+=======
           <Route path="/shop-register" element={<ShopRegister />} />
           <Route path="/shop-login" element={<ShopLogin />} />
           <Route path="/shop-profile" element={<ShopProfile />} />
+>>>>>>> 0151b6865a1c29c1056a6f9ebf470e8573e6fa8a
         </Routes>
         <Footer role={role} />
       </div>

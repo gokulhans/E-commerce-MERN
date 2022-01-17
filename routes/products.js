@@ -8,7 +8,7 @@ router.get('/',async (req,res)=>{
   console.log('calling....');
     let product = await db.get().collection('products').find({}).toArray()
     console.log(product);
-    res.status(200).json(product);
+    res.json(product);
 })
 
 router.post('/add-product',(req,res)=>{
