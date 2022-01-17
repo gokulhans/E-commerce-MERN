@@ -2,9 +2,6 @@
   "name": "e-commerce",
   "version": "0.0.0",
   "private": true,
-  "engines": {
-    "node": "v16.13.1"
-  },
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -21,7 +18,8 @@
     "http-errors": "~1.6.3",
     "mongodb": "^4.2.2",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "dotenv": "^10.0.0"
