@@ -6,7 +6,10 @@
   },
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "concurrently \"node server.js\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
