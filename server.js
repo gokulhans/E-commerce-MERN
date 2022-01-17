@@ -7,9 +7,8 @@ const PORT = 8000;
 const express = require('express');
 const app = express();
 
-
 const cors = require('cors');
-const sessions = require('express-session');
+const sessions = require('cookie-session');
 var db = require('./connection');
 
   
@@ -62,10 +61,6 @@ app.use(sessions({
   })
   
 // server listening
-<<<<<<< HEAD
-app.listen(process.env.PORT || 5000,()=>{
-=======
 app.listen(process.env.PORT || PORT,()=>{
->>>>>>> b913353966b522d5a771d6d009cca13eba5d7541
   console.log(`server is listening on ${PORT}`);
 })

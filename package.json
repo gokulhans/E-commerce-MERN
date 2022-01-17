@@ -1,19 +1,17 @@
 {
-  "name": "E-commerce",
+  "name": "e-commerce",
   "version": "0.0.0",
-  "engines": {
-    "node": "v16.13.2"
-  },
   "private": true,
   "engines": {
     "node": "v16.13.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
