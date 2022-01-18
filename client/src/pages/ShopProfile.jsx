@@ -1,8 +1,11 @@
 import React from 'react'
+import Shopbar from '../components/Shopbar'
 import './ShopProfile.css'
 
 const ShopProfile = () => {
     return (
+        <>
+        <Shopbar/>
         <div>
             <h1 style={{ color: 'green' }}>OPPO</h1>
 
@@ -42,6 +45,7 @@ const ShopProfile = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

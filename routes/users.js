@@ -9,11 +9,8 @@ router.get('/', (req, res) => {
   var response = {}
   if (req.session.loggedIN) {
     response.login = true
-<<<<<<< HEAD
-=======
     response.user = req.session.user
     console.log(response);
->>>>>>> 91d6a82af3f7974f4a704384ab1a894ef6346d77
   }
   if (req.session.type == 'company') {
     response.login = true

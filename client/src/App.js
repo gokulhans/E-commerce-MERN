@@ -36,36 +36,26 @@ function App() {
       .then(data => {
         setlogin(data.login)
         setrole(data.role)
-<<<<<<< HEAD
-=======
       })
     fetch("shop").then(response => response.json())
       .then(data => {
         setlogin(data.login)
         setrole(data.role)
->>>>>>> 91d6a82af3f7974f4a704384ab1a894ef6346d77
       })
     fetch("products").then(response => response.json())
       .then(data => {
         setproducts(data)
       })
-<<<<<<< HEAD
-
-=======
->>>>>>> 91d6a82af3f7974f4a704384ab1a894ef6346d77
   }, []);
   let state = {};
   state.products = products
   state.role = role
-<<<<<<< HEAD
-=======
 
-  let navbar = {login:'',user:''}
+  let navbar = { login: '', user: '' }
   navbar.login = login
   navbar.user = user
 
 
->>>>>>> 91d6a82af3f7974f4a704384ab1a894ef6346d77
   return (
     <>
       <div>
