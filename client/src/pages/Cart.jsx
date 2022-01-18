@@ -27,7 +27,7 @@ function Cart() {
                         </div>
                         <div class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
                             <div class="d-flex flex-row align-items-center">
-                                <div><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="150" height="150" alt="image" id="image"/></div>
+                                <div><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="150" height="150" alt="" id="image"/></div>
                                 <div class="d-flex flex-column pl-md-3 pl-1">
                                     <div>
                                         <h6>COTTON T-SHIRT</h6>
@@ -44,7 +44,7 @@ function Cart() {
                         </div>
                         <div class="d-flex flex-row justify-content-between align-items-center pt-4 pb-3 mobile">
                             <div class="d-flex flex-row align-items-center">
-                                <div><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="150" height="150" alt="image" id="image"/></div>
+                                <div><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="150" height="150" alt="" id="image"/></div>
                                 <div class="d-flex flex-column pl-md-3 pl-1">
                                     <div>
                                         <h6>WHITE T-SHIRT</h6>
