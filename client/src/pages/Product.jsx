@@ -13,6 +13,9 @@ const Product = (props) => {
     const addToCart = (e) => {
         let product = {}
         product.price = e.target.getAttribute("price");
+        product.price = e.target.getAttribute("price");
+        product.price = e.target.getAttribute("price");
+        product.price = e.target.getAttribute("price");
         product.item = e.target.value
         productsarray.push(product)
         localStorage.setItem('product',JSON.stringify(productsarray))  
