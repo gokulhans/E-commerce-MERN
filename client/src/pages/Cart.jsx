@@ -11,8 +11,8 @@ function Cart() {
     return (
         <>
              
-             <div class="container bg-white">
-                <div class="row">
+             <div className="container bg-white">
+                <div className="row">
                 {
                 products.map((product, index) => (
                     <Product product={product}/>

@@ -12,35 +12,35 @@ const ShopProfile = () => {
             <h4>All Products</h4>
             <div className="row">
 
-                <div class="card">
-                    <div class="imgBox">
-                        <img src="" alt="mouse corsair" class="mouse" />
+                <div className="card">
+                    <div className="imgBox">
+                        <img src="" alt="mouse corsair" className="mouse" />
                     </div>
-                    <div class="contentBox">
+                    <div className="contentBox">
                         <h3>Mouse Corsair M65</h3>
-                        <h2 class="price">61.<small>98</small> €</h2>
-                        <a href="#" class="buy">Buy Now</a>
+                        <h2 className="price">61.<small>98</small> €</h2>
+                        <a href="#" className="buy">Buy Now</a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="imgBox">
-                        <img src="" alt="mouse corsair" class="mouse" />
+                <div className="card">
+                    <div className="imgBox">
+                        <img src="" alt="mouse corsair" className="mouse" />
                     </div>
-                    <div class="contentBox">
+                    <div className="contentBox">
                         <h3>Mouse Corsair M65</h3>
-                        <h2 class="price">61.<small>98</small> €</h2>
-                        <a href="#" class="buy">Buy Now</a>
+                        <h2 className="price">61.<small>98</small> €</h2>
+                        <a href="#" className="buy">Buy Now</a>
                     </div>
                 </div>
-                <div class="card">
+                <div className="card">
                     
-                    <div class="imgBox">
-                        <img src="" alt="mouse corsair" class="mouse" />
+                    <div className="imgBox">
+                        <img src="" alt="mouse corsair" className="mouse" />
                     </div>
-                    <div class="contentBox">
+                    <div className="contentBox">
                         <h3>Mouse Corsair M65</h3>
-                        <h2 class="price">61.<small>98</small> €</h2>
-                        <a href="#" class="buy">Buy Now</a>
+                        <h2 className="price">61.<small>98</small> €</h2>
+                        <a href="#" className="buy">Buy Now</a>
                     </div>
                 </div>
             </div>
