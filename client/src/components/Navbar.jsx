@@ -7,6 +7,11 @@ const Navbar = (props) => {
 
 
     let navbar = props.navbar
+    if (navbar.login) {
+        
+        var profile =     <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
+    }
+
     if (!navbar.login) {
         var component =
             <div>
@@ -50,8 +55,7 @@ const Navbar = (props) => {
                                 <Link className="link" to="/track">Track Ur Order</Link>
                             </div>
                      
-                                                {component} 
-    <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
+                                                {component}  {profile}
                         </form>
                     </div>
                 </div>
