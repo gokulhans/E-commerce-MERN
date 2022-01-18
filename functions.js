@@ -91,7 +91,7 @@ module.exports={
                 }else {
                     console.log('login success');
                     response.status = true
-                    response.user = userobj
+                    response.user = user
                     response.type = user.type
                     resolve(response)
                 }

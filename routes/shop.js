@@ -4,8 +4,8 @@ var fun = require('../functions')
 
 
 router.post('/signup', (req, res) => {
+
   fun.ShopSignup(req.body).then((response) => {
-    console.log(response);
     if (response.signupstatus) {
       var session = req.session;
       session.type = response.type
@@ -21,7 +21,6 @@ router.post('/signup', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  console.log("login shop clicked");
   fun.ShopLogin(req.body).then((response) => {
     if (response.status) {
       req.session.user = String(response.user._id)
