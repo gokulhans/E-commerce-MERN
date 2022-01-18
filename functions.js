@@ -27,7 +27,6 @@ module.exports={
             let user= await db.get().collection('users').findOne({email:userdata.email}).then((response) => {
                 return userobj = response
             })
-            console.log(user);
             let response = {}
             if (user) {
                 
