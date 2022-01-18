@@ -9,11 +9,6 @@ router.get('/', (req, res) => {
   if (req.session.loggedIN) {
     response.login = true
     response.user = req.session.user
-    console.log(response);
-  }
-  if (req.session.type == 'company') {
-    response.login = true
-    response.role = true
     res.json(response);
   }
   else {
@@ -66,7 +61,7 @@ router.get('/login', function (req, res) {
 router.post('/login', (req, res) => {
   fun.doLogin(req.body).then((response) => {
     if (response.status) {
-      req.session.user = String(response.user._id)
+      req.session.user = response.user
       req.session.loggedfalse = false
       req.session.loggedIN = true
       req.session.type = response.type
@@ -76,8 +71,6 @@ router.post('/login', (req, res) => {
 
       res.status(200).json(response);
     }
-<<<<<<< HEAD
-=======
   });
   
   router.post('/login', (req, res) => {
@@ -95,7 +88,6 @@ router.post('/login', (req, res) => {
         res.status(200).json(response);
       }
     })
->>>>>>> userlogin
   })
 })
 

@@ -34,8 +34,10 @@ function App() {
   useEffect(() => {
     fetch("users").then(response => response.json())
       .then(data => {
+        console.log(data);
         setlogin(data.login)
         setrole(data.role)
+        setuser(data.user)
       })
     fetch("shop").then(response => response.json())
       .then(data => {
