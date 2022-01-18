@@ -9,14 +9,14 @@ const Navbar = (props) => {
     let navbar = props.navbar
     if (navbar.login) {
         
-        var profile =     <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
+        var profile =     <button className="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
     }
 
     if (!navbar.login) {
         var component =
             <div>
-                <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
-                <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
+                <button className="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
+                <button className="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
             </div>
     }
     
@@ -29,19 +29,19 @@ const Navbar = (props) => {
     //         })
     // }
     // if (login) {
-    //     var logout = <button class="m-2 btn btn-outline-danger" onClick={(e) => { Logout(e) }} type="submit">LOGOUT</button>
+    //     var logout = <button className="m-2 btn btn-outline-danger" onClick={(e) => { Logout(e) }} type="submit">LOGOUT</button>
     // }
 
     return (
         <>
-            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand"><Link to="/"><b>Fasino</b></Link></a>
+            <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <a className="navbar-brand"><Link to="/"><b>Fasino</b></Link></a>
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         </ul>
-                        <form class="d-flex">
+                        <form className="d-flex">
                             <div className="items m-3">
                                 <Link className="link" to="/">Home</Link>
                                 <Link className="link" to="/add-product">Add Product</Link>

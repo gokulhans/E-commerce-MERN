@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../components/Product'
+import Product from '../components/Eachproduct'
 import './Home.css'
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
             </div>
 
 
-            <div class="container bg-white">
-                <div class="row">
+            <div className="container bg-white">
+                <div className="row">
                     <Product />
                     <Product />
                     <Product />
