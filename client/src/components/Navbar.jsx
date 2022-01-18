@@ -14,6 +14,8 @@ const Navbar = (props) => {
                 <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
             </div>
     }
+    
+
     // const Logout = (e) => {
 
     //     fetch("users/logout").then(response => response.json())
@@ -47,10 +49,9 @@ const Navbar = (props) => {
                                 <Link className="link" to="/delivery">Delivery</Link>
                                 <Link className="link" to="/track">Track Ur Order</Link>
                             </div>
-                <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
                      
                                                 {component} 
-
+    <button class="m-2 btn btn-primary" type="submit"><Link to="/profile">{navbar.user.name}</Link></button>
                         </form>
                     </div>
                 </div>

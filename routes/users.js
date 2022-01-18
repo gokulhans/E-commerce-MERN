@@ -66,6 +66,7 @@ router.get('/signup', (req, res) => {
         req.session.loggedfalse = false
         req.session.loggedIN = true
         req.session.type = response.type
+        req.session.user = response.session
         res.status(200).json(response)
       } else {
         req.session.loggedfalse = true
