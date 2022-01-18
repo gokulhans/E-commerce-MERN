@@ -19,7 +19,7 @@ const Shopbar = () => {
                                 <Link className="link" to="/add-product">Add Product</Link>
                             </div>
                         </form>
-                    </div>
+                    </div> 
                 </div>
             </nav>
         </>
