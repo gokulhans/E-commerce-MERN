@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Product.css'
 
 const Product = (props) => {
@@ -8,14 +8,26 @@ const Product = (props) => {
     if (state.role) {
         var deletebtn = <h1>delete</h1>
     }
-    const [id, setid] = useState('')
-    console.log('id'+id);
+
+    let productsarray = []
+    const addToCart = (e) => {
+        let product = {}
+        product.price = e.target.getAttribute("price");
+        product.item = e.target.value
+        productsarray.push(product)
+        localStorage.setItem('product',JSON.stringify(productsarray))  
+    }
+    
+
     return (
-        
+
         <div class="row">
             {
                 products.map((product, index) => (
                     <div>
+                        <button value={product.item} price={product.price} onClick={(e) => {
+                            addToCart(e)
+                        }}>hlo</button>
                         <div class="card" key={index} >
                             <div class="view zoom overlay">
                                 <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.webp" alt="Sample" />
@@ -23,7 +35,7 @@ const Product = (props) => {
                                 <a href="">
                                     <div class="mask">
                                         <img class="img-fluid w-100"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.webp" alt='ffd'/>
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.webp" alt='ffd' />
                                         <div class="mask rgba-black-slight"></div>
                                     </div>
                                 </a>
@@ -41,7 +53,7 @@ const Product = (props) => {
                                 </h6>
                                 <p>  {product.des}</p>
                                 <button type="button" class="btn btn-primary btn-sm mr-1 mb-2">
-                                    <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+                                    <i class="fas fa-shopping-cart pr-2" ></i>Add to cart
                                 </button>
                                 <a class="btn btn-light btn-sm mr-1 mb-2">
                                     <i class="fas fa-info-circle pr-2"></i> Details
@@ -49,8 +61,8 @@ const Product = (props) => {
                                 <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
                                     <i class="far fa-heart"></i>
                                 </button>
-                                <button onClick={()=>{setid(product.price)}}>ID</button>
-                            {deletebtn}
+
+                                {deletebtn}
                             </div>
 
                         </div>

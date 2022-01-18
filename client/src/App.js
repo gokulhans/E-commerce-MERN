@@ -39,6 +39,7 @@ function App() {
         setrole(data.role)
         setuser(data.user)
       })
+
     fetch("shop").then(response => response.json())
       .then(data => {
         setlogin(data.login)
@@ -49,6 +50,10 @@ function App() {
         setproducts(data)
       })
   }, []);
+
+ 
+
+
   let state = {};
   state.products = products
   state.role = role

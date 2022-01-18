@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
+
 const Login = () => {
 
     var err
@@ -27,6 +28,7 @@ const Login = () => {
                 if (!data.status) {
                     console.log('login failed');
                 } else {
+                    localStorage.setItem("user",JSON.stringify(data.user))
                     navigate('/')
                 }
             })
@@ -36,7 +38,7 @@ const Login = () => {
 
         <div className="main container">
             <h2 className="mt-3">Login</h2>
-            
+
 
             <section class="vh-100">
                 <div class="container-fluid h-custom">
