@@ -14,10 +14,10 @@ const Product = ({product}) => {
                     </ul>
                 </div>
                 <div className="tag bg-red">sale</div>
-                <div className="title pt-4 pb-1">Winter Sweater</div>
-                <div className="title pt-4 pb-1">{product.item}</div>
+                <div className="title pt-4 pb-1">Type</div>
+                <div className="title pt-4 pb-1">Item</div>
                 <div className="d-flex align-content-center justify-content-center"> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> </div>
-                <div className="price">prize = {product.price}</div>
+                <div className="price">prize</div>
             </div>
         </>
 
