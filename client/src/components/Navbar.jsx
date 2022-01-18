@@ -18,7 +18,6 @@ const Navbar = (props) => {
                 <button class="m-2 btn btn-outline-success" type="submit"><Link to="/register">Register</Link></button>
                 <button class="m-2 btn btn-outline-primary" type="submit"><Link to="/login">Login</Link></button>
             </div>
-        var name = navbar.user.name
     }
     
 
