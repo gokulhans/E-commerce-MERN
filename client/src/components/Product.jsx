@@ -2,7 +2,7 @@ import React from 'react'
 import '../pages/Home.css'
 
 const Product = ({product}) => {
-    console.log(product);
+    
     return (
         <>
             <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
