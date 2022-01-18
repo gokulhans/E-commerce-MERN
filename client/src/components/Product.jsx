@@ -1,7 +1,8 @@
 import React from 'react'
 import '../pages/Home.css'
 
-const Product = () => {
+const Product = ({product}) => {
+    console.log(product);
     return (
         <>
             <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -14,8 +15,9 @@ const Product = () => {
                 </div>
                 <div class="tag bg-red">sale</div>
                 <div class="title pt-4 pb-1">Winter Sweater</div>
+                <div class="title pt-4 pb-1">{product.item}</div>
                 <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">$ 60.0</div>
+                <div class="price">prize = {product.price}</div>
             </div>
         </>
 
