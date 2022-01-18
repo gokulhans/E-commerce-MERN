@@ -1,5 +1,4 @@
 const express = require('express');
-const session = require('express-session');
 const router = express.Router();
 var fun = require('../functions')
 
@@ -77,6 +76,26 @@ router.post('/login', (req, res) => {
 
       res.status(200).json(response);
     }
+<<<<<<< HEAD
+=======
+  });
+  
+  router.post('/login', (req, res) => {
+    fun.doLogin(req.body).then((response) => {
+      if (response.status) {
+        req.session.user = response.user
+        req.session.loggedfalse = false
+        req.session.loggedIN = true
+        req.session.type = response.type
+        req.session.user = response.session
+        res.status(200).json(response)
+      } else {
+        req.session.loggedfalse = true
+  
+        res.status(200).json(response);
+      }
+    })
+>>>>>>> userlogin
   })
 })
 
