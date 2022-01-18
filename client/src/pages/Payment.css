@@ -27,14 +27,15 @@
     padding: 0 16px;
   }
   
-  .container {
+.payment-body  .container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
+    padding:20px;
   }
   
-  input[type=text] {
+.payment-body  input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
@@ -42,7 +43,7 @@
     border-radius: 3px;
   }
   
-  label {
+.payment-body  label {
     margin-bottom: 10px;
     display: block;
   }
@@ -53,7 +54,7 @@
     font-size: 24px;
   }
   
-  .btn {
+ .payment-body .btn {
     background-color: #04AA6D;
     color: white;
     padding: 12px;
@@ -65,7 +66,7 @@
     font-size: 17px;
   }
   
-  .btn:hover {
+ .payment-body .btn:hover {
     background-color: #45a049;
   }
   

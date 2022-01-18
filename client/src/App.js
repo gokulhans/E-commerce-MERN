@@ -15,13 +15,13 @@ import Test from "./pages/Test";
 import Cart from "./pages/Cart";
 import Billing from "./pages/Billing";
 import Payment from "./pages/Payment";
-import Delivary from "./pages/Delivery";
 import History from "./pages/History";
 import Track from "./pages/Track";
 import SingleProduct from "./pages/SingleProduct";
 import ShopRegister from "./pages/ShopRegister";
 import ShopLogin from "./pages/ShopLogin";
 import ShopProfile from "./pages/ShopProfile";
+import Done from "./pages/Done";
 
 
 function App() {
@@ -80,12 +80,12 @@ function App() {
           <Route path="/billing" element={<Billing />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/history" element={<History />} />
-          <Route path="/delivery" element={<Delivary />} />
           <Route path="/track" element={<Track />} />
           <Route path="/product/:id" element={<SingleProduct />} />
           <Route path="/shop-register" element={<ShopRegister />} />
           <Route path="/shop-login" element={<ShopLogin />} />
           <Route path="/shop-profile" element={<ShopProfile />} />
+          <Route path="/payment-done" element={<Done />} />
         </Routes>
         <Footer role={role} />
       </div>

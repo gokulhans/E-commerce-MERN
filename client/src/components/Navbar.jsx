@@ -42,7 +42,7 @@ const Navbar = (props) => {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         </ul>
                         <form className="d-flex">
-                            <div className="items m-3">
+                            <div className="items m-3"> 
                                 <Link className="link" to="/">Home</Link>
                                 <Link className="link" to="/add-product">Add Product</Link>
                                 <Link className="link" to="/admin">Admin</Link>
@@ -51,7 +51,6 @@ const Navbar = (props) => {
                                 <Link className="link" to="/billing">Billing</Link>
                                 <Link className="link" to="/payment">Payment</Link>
                                 <Link className="link" to="/history">History</Link>
-                                <Link className="link" to="/delivery">Delivery</Link>
                                 <Link className="link" to="/track">Track Ur Order</Link>
                             </div>
                      
