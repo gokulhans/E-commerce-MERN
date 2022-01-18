@@ -69,6 +69,7 @@ function Billing() {
                         </div>
                     </div>
                 </div>
+                <p className="font-weight-bold mb-0">Thanks for shopping with us Fasino Team </p>
             </div>
         </div>
     )

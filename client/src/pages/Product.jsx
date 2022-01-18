@@ -47,6 +47,7 @@ const Product = (props) => {
 
     return (
         <div className="container bg-white">
+<<<<<<< HEAD
 
             <div class="row">
                 {
@@ -57,6 +58,14 @@ const Product = (props) => {
                             }}>hlo</button>
 
                             <div className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+=======
+            <div className="row">
+                {
+                    products.map((product, index) => (
+                        <>
+                            <div className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                              
+>>>>>>> 30bed103f2fc5c15386105a1919eddf901d2ed7f
                                 <div className="product"> <img src="https://images.pexels.com/photos/54203/pexels-photo-54203.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
                                     <ul className="d-flex align-items-center justify-content-center list-unstyled icons">
                                         <li className="icon"><span className="fas fa-expand-arrows-alt"></span></li>
@@ -64,10 +73,20 @@ const Product = (props) => {
                                         <li className="icon"><span className="fas fa-shopping-bag"></span></li>
                                     </ul>
                                 </div>
+<<<<<<< HEAD
                                 <div className="tag bg-red">{product.item}</div>
                                 <div className="title pt-4 pb-1">{product.type}</div>
                                 <div className="d-flex align-content-center justify-content-center"> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> </div>
                                 <div className="price">{product.price}</div>
+=======
+                                <div className="tag bg-red">SALE</div>
+                                <div className="title pt-4 pb-1">{product.item}</div>
+                                <div className="title pt-4 pb-1">{product.type}</div>
+                                <div className="d-flex align-content-center justify-content-center"> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> </div>
+                                <div className="price">{product.price}</div>
+                                <button className="btn" value={product.item} price={product.price} onClick={(e) => { addToCart(e) }}>add to cart
+                                </button>
+>>>>>>> 30bed103f2fc5c15386105a1919eddf901d2ed7f
                             </div>
 
                         </>
