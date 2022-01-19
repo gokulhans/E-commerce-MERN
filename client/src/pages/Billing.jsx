@@ -3,8 +3,24 @@ import { Link } from 'react-router-dom'
 import './Billing.css'
 
 function Billing() {
+
+
+    let product = JSON.parse(localStorage.getItem("cartproducts"))
+    console.log(product);
+    let price = 0;
+
+    product.forEach(element => {
+        console.log(element);
+
+        price = price + parseInt(element.product.price)
+    });
+
+    console.log(price);
+    localStorage.setItem("price", JSON.stringify(price))
     return (
         <div>
+
+
             <div className="container mt-5 mb-5">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-8">
@@ -22,7 +38,7 @@ function Billing() {
                                                 <td>
                                                     <div className="py-2"> <span className="d-block text-muted">Order No</span> <span>MT12332345</span> </div>
                                                 </td>
-                                                
+
                                                 <td>
                                                     <div className="py-2"> <span className="d-block text-muted">Shiping Address</span> <span>414 Advert Avenue, NY,USA</span> </div>
                                                 </td>
@@ -30,21 +46,25 @@ function Billing() {
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="product border-bottom table-responsive">
-                                    <table className="table table-borderless">
-                                        <tbody>
-                                            <tr>
-                                                <td width="20%"> <img src="https://i.imgur.com/u11K1qd.jpg" width="90" /> </td>
-                                                <td width="60%"> <span className="font-weight-bold">Men's Sports cap</span>
-                                                    <div className="product-qty"> <span className="d-block">Quantity:1</span> <span>Color:Dark</span> </div>
-                                                </td>
-                                                <td width="20%">
-                                                    <div className="text-right"> <span className="font-weight-bold">$67.50</span> </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                {
+                                    product.map((product, index) => (
+                                        <div className="product border-bottom table-responsive">
+                                            <table className="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="20%"> <img src="https://i.imgur.com/u11K1qd.jpg" width="90" /> </td>
+                                                        <td width="60%"> <span className="font-weight-bold">{product.product.item} </span>
+                                                            <div className="product-qty"> <span className="d-block">Quantity:1</span> <span>Color:Dark</span> </div>
+                                                        </td>
+                                                        <td width="20%">
+                                                            <div className="text-right"> <span className="font-weight-bold">$ {product.product.price}</span> </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    ))}
+
                                 <div className="row d-flex justify-content-end">
                                     <div className="col-md-5">
                                         <table className="table table-borderless">
@@ -54,10 +74,10 @@ function Billing() {
                                                         <div className="mt-2 text-left"> <span className="font-weight-bold">Subtotal</span> </div>
                                                     </td>
                                                     <td>
-                                                        <div className="mt-2 text-right"> <span className="font-weight-bold text-success">$238.50</span> </div>
+                                                        <div className="mt-2 text-right"> <span className="font-weight-bold text-success">$ {price}</span> </div>
                                                     </td>
                                                     <td>
-                                                        <button className=" btn btn-success"><Link to="/payment"><b>Pay</b></Link></button>
+                                                        <Link className=" btn btn-success" to="/payment"><b>Pay</b></Link>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -70,6 +90,7 @@ function Billing() {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

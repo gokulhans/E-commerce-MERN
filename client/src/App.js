@@ -32,6 +32,13 @@ function App() {
   const [user, setuser] = useState('');
 
   useEffect(() => {
+    fetch("cart", {
+      method: "get"
+    }).then(response => response.json()).then((data) => {
+      localStorage.setItem("cartproducts", JSON.stringify(data));
+    })
+
+
     fetch("users").then(response => response.json())
       .then(data => {
         console.log(data);
@@ -51,7 +58,7 @@ function App() {
       })
   }, []);
 
- 
+
 
 
   let state = {};

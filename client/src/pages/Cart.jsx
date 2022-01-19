@@ -1,19 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Cart() {
+    
 
-    var products = localStorage.getItem('product');
-
-    products = JSON.parse(products)
-    console.log(products);
-
+    let product = JSON.parse(localStorage.getItem("cartproducts"))
+    console.log(product);
+ 
     return (
         <>
 
             <div class="container bg-white">
                 <div class="row">
                     {
-                        products.map((product, index) => (
+                        product.map((product, index) => (
                             <>
                                 <div key={index} className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
                                     <div className="product"> <img src="https://images.pexels.com/photos/54203/pexels-photo-54203.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
@@ -24,15 +24,17 @@ function Cart() {
                                         </ul>
                                     </div>
                                     <div className="tag bg-red">NEW</div>
-                                    <div className="title pt-4 pb-1">{product.item}</div>
-                                    <div className="title pt-4 pb-1">{product.type}</div>
+                                    <div className="title pt-4 pb-1">{product.product.item}</div>
+                                    <div className="title pt-4 pb-1">{product.product.type}</div>
                                     <div className="d-flex align-content-center justify-content-center"> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> <span className="fas fa-star"></span> </div>
-                                    <div className="price">{product.price}</div>
+                                    <div className="price">{product.product.price}</div>
                                 </div>
                             </>
                         ))}
                 </div>
             </div>
+            <Link to="/billing"><b>Checkout and Proceed</b></Link>
+
         </>
     )
 }

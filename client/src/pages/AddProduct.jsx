@@ -22,7 +22,7 @@ const AddProduct = () => {
             },
             body: JSON.stringify({
                 type,
-                item, price, des
+                item, des,price
             })
         }).then(response => response.json())
             .then(data => {
@@ -50,7 +50,7 @@ const AddProduct = () => {
                             <input type="text" id="form5Example2" className="form-control" onChange={(e) => setdes(e.target.value)} />
                         </div>
                         <div className="form mb-2">
-                            <label for="form5Example2">Description</label>
+                            <label for="form5Example2">Price</label>
                             <input type="text" id="form5Example2" className="form-control" onChange={(e) => setprice(e.target.value)} />
                         </div>
                         <div className="form d-flex justify-content-center mb-4">

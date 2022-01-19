@@ -6,9 +6,11 @@ import './Payment.css'
 function Payment() {
 
 
-  // $(function() {
-  //     $('[data-toggle="tooltip"]').tooltip()
-  //     })
+  let product = JSON.parse(localStorage.getItem("cartproducts"))
+  console.log(product);
+  
+  let total = JSON.parse(localStorage.getItem("price"))
+
 
   return (
     <>
@@ -86,16 +88,17 @@ function Payment() {
               <h4>Cart
                 <span class="price">
                   <i class="fa fa-shopping-cart"></i>
-                  <b>4</b>
+                  <b>{product.length}</b>
                 </span>
               </h4>
               <h4>
-                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+              {
+                                    product.map((product, index) => (
+
+                <p><a href="#">{product.product.item} </a> <span class="price">$ {product.product.price}</span></p>
+                                    ))}
               </h4>
-              <p>Total <span class="price"><b>$30</b></span></p>
+              <p>Total <span class="price"><b>$ {total}</b></span></p>
             </div>
           </div>
         </div>
