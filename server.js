@@ -19,11 +19,15 @@ app.use(cors());
 
 // app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 
 // getting and posting methods
+
+app.get('/', function (req, res) {
+  res.send("hello);
+});
 
 app.post("/post", (req, res) => {
   console.log("Connected to React");
