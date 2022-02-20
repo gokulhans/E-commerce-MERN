@@ -2,4 +2,4 @@
 An E-commerce Store built with MERN stack.
 
 
-https://fasinoshop.herokuapp.com/
+https://fasinoshop.herokuapp.com/login/
