@@ -25,10 +25,6 @@ app.use(cors());
 
 // getting and posting methods
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Backend! working')
-})
-
 app.post("/post", (req, res) => {
   console.log("Connected to React");
   res.redirect("/");
