@@ -25,8 +25,8 @@ app.use(cors());
 
 // getting and posting methods
 
-app.get('/', function (req, res) {
-  res.send("hello);
+app.get('/', (req, res)=> {
+  res.send("hello");
 });
 
 app.post("/post", (req, res) => {
